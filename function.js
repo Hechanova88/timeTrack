@@ -1,8 +1,26 @@
-$ t switch World Domination Plan
-$ t in --at "5 minutes ago" Research Volcano Islands
-$ t out
-$ t display
-Timesheet World Domination Plan:
-Day            Start      End        Duration   Notes
-Mar 14, 2009   19:53:30 - 20:06:15   0:12:45    Research Volcano Islands
-Total                                0:12:45
+// send a request about an event to the server
+function fireEvent(action, message, options) {
+    var loggerUrl = "/tracker.gif", parameters;
+    options = options || {};
+    options.url = options.url || window.location.href;
+    options.user_agent = navigator.userAgent;
+    options.message = message;
+    for (var i in options) {
+      if (options.hasOwnProperty(i)) {
+        parameters += "&" + i + "=" + encodeURIComponent(options[i]);
+      }
+    }    
+    new Image().src = loggerUrl + parameters;
+  }
+  
+  // log script errors
+  window.onerror = function(errorMessage, url, line) {   
+    fireEvent("error", errorMessage, {
+      url: url, 
+      line: line
+    });
+    return true;
+  };
+  
+  // example event on the page
+  fireEvent("ajaxError", "XY page failed to load");
