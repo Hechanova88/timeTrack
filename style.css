@@ -17,7 +17,7 @@ body{
 .box h1{
     color: white;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight:500;
 }
 .box input[type = "text"],.box input[type = "password"]{
     border:0;
@@ -54,3 +54,9 @@ body{
 .box input[type = "submit"]:hover{
     background: #2ecc71;
 }
+#particles-js
+{
+    height: 100%
+
+}
+
