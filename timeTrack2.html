@@ -2,6 +2,8 @@
 <html lang="en" dir="ltr">
 <!-- Music added https://www.bensound.com/royalty-free-music/cinematic--> 
 <head>
+ 
+
   <meta charset="utf-8">
   <title>timeTrack Digital clock</title>
   <meta name="author" content="">
@@ -14,11 +16,17 @@
         
 </head>
 
-  
+
 
 <body onload="initClock()">
 
-
+  <div id="particles-js"></div>
+  <script type="text/javascript" src = "particles.js"></script>
+  <script type="text/javascript" src = "app.js"></script>  
+  <div class="text">
+    <a href="index.html"
+    <button onclick="myFunction()" class="message">You are clocked in</button> 
+  </a>
 
     <!--digital clock start-->
     <div class="datetime">
@@ -36,9 +44,7 @@
       </div>
     </div>
     <!--digital clock end-->
-    <div id="particles-js"></div>
-    <script type="text/javascript" src = "particles.js"></script>
-    <script type="text/javascript" src = "app.js"></script>  
+   
 
     <script type="text/javascript">
     function updateClock(){
@@ -80,13 +86,17 @@
       window.setInterval("updateClock()", 1);
     }
 </script>
-
+<br>
  
     <div class="text">
       <a href="index.html"
       <button onclick="myFunction()" class="dropbtn">Logout</button> 
     </a>
+
    
+   
+
+
       </div>
     </div>
   </div>

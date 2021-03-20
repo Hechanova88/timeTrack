@@ -42,10 +42,7 @@
 }
 .time span:not(:last-child){
     position: relative;
-    margin: 0 6px;
-    font-weight: 600;
-    text-align: center;
-    letter-spacing: 3px;
+   
   }
   
   .time span:last-child{
@@ -60,9 +57,7 @@
 #particles-js
 {
     height: 100%;
-    width: 100%;
-    
-
+   
 }
 .dropbtn {
   background: linear-gradient(90deg, rgb(241, 30, 196), rgb(27, 165, 219), rgb(0, 0, 0));
@@ -71,4 +66,14 @@
   font-size: 16px;
   border: none;
   cursor: pointer;
+}
+
+.message{
+  background: linear-gradient(90deg, rgb(241, 30, 196), rgb(27, 165, 219), rgb(0, 0, 0));
+  color: white;
+  margin: 0 8px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 7px;
+  font-size: 30px;
 }
