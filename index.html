@@ -7,6 +7,7 @@
   <meta name="author" content="">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
   <link href="style.css" rel="stylesheet">
   <audio autoplay=""><source src="Relax - Smooth Trap.mp3" type="audio/mpeg">
   </audio>
@@ -20,10 +21,12 @@
     <form class="box" action="index.html" method="post" >
       <h1>Login</h1>
       
-      <input type="text" name="" placeholder="Username">
-      <input type="text" name="" placeholder="Password">
+      <input type="text" input id="txtUsername" name="" placeholder="Username">
+      <input type="text" input id="txtPassword" name="" placeholder="Password">
       <a href="Sidebar.html">
-      <input type="text" name="" value="Login">
+
+      <input type="text" button id= "btnLogin" class="btn btn-action" name="" value="Login">
+      <input type="text" button id= "btnLogin" class="btn btn-action" name="" value="Signup">
     </a>
     </form>
 
