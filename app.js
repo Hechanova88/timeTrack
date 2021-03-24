@@ -1,22 +1,3 @@
-const config ={
-    apiKey: "AIzaSyBeALhV9jR884SMo5AOfHfSYmXcFlAiCEo",
-    authDomain: "timetrack-4d7f6.firebaseapp.com",
-    projectId: "timetrack-4d7f6",
-    storageBucket: "timetrack-4d7f6.appspot.com",
-  };
- 
-  firebase.initializeApp(firebaseConfig);
-
-  // Get elements
-  const txtEmail = document.getElementById('txtEmail');
-  const txtPasswords = document.getElementById('txtPasssword');
-  const btnLogin = document.getElementById('btnLogin');
-  const btnSignup = document.getElementById('btnSignup');
-  const btnLogout = document.getElementById('btnLogout');
-//Sign in
-const promise = auth.signInWithEmailAndPasword(email, pass);
-promise.catche(e=> console.log(e.message));
- ;
 
 /* -----------------------------------------------
 /* How to use? : Check the GitHub README
@@ -150,6 +131,7 @@ particlesJS('particles-js',
       "background_repeat": "no-repeat",
       "background_size": "cover"
     }
+    
     
   }
 
