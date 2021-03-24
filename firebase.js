@@ -1,34 +1,64 @@
-(function()){
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-    apiKey: "AIzaSyBeALhV9jR884SMo5AOfHfSYmXcFlAiCEo",
-    authDomain: "timetrack-4d7f6.firebaseapp.com",
-    databaseURL: "https://timetrack-4d7f6-default-rtdb.firebaseio.com",
-    projectId: "timetrack-4d7f6",
-    storageBucket: "timetrack-4d7f6.appspot.com",
-    messagingSenderId: "796459951357",
-    appId: "1:796459951357:web:930318c50c8846b92d0a94",
-    measurementId: "G-HF84FKMBHD"
+// Your web app's Firebase configuration
+var firebaseConfig = {
+	apiKey: "AIzaSyD-DBBqcmv8pE2MwuCa1kESmatCxDZSOT4",
+    authDomain: "auth-development-a310b.firebaseapp.com",
+    projectId: "auth-development-a310b",
+    storageBucket: "auth-development-a310b.appspot.com",
+    messagingSenderId: "487757847348",
+    appId: "1:487757847348:web:3b8d304a110b9a8cab2361"
+
   };
-  firebaseConfig.intializeApp(config);
-    // Get elements
-    const txtEmail = document.getElementById('txtEmail');
-    const txtPassword = document.getElementById('txtPasssword');
-    const btnLogin = document.getElementById('btnLogin');
-    const btnSignup = document.getElementById('btnSignup');
-    const btnLogout = document.getElementById('btnLogout');
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 
-//add login
-btnLogin.addEventListener('click', e=> {
+  const auth = firebase.auth();
+	
+	
+	function signUp(){
+		
+		var email = document.getElementById("email");
+		var password = document.getElementById("password");
+		
+		const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
+		promise.catch(e => alert(e.message));
+		
+		alert("Signed Up");
+	}
+	
+	function signIn(){
+		
+		var email = document.getElementById("email");
+		var password = document.getElementById("password");
+		
+		const promise = auth.signInWithEmailAndPassword(email.value, password.value);
+		promise.catch(e => alert(e.message));
+		
+	}
+	
+	
+	function signOut(){
+		
+		auth.signOut();
+		alert("Signed Out");
+		
+	}
 
-    const email = txtEmail.nodeValue;
-    const pass = txtPassword.nodeValue;
-    const auth = firebase.auth();
-})
+	auth.onAuthStateChanged(function(user){
+		
+		if(user){
+			
+			var email = user.email;
+			alert("Active User " + email);
+			
+			//Take user to a different or home page
+      location.href="Sidebar.html"
 
+			//is signed in
+			
+		}else{
+			
+			alert("No Active User");
+			//no user is signed in
+		}
 
-  //Sign in
-  const promise = auth.signInWithEmailAndPasword(email, pass);
-  promise.catche(e=> console.log(e.message));
-};
-  
+	});

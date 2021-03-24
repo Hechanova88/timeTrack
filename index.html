@@ -10,6 +10,10 @@
   <script src="https://www.gstatic.com/firebasejs/3.1/firebase-analytics.js"></script>
   <link href="style.css" rel="stylesheet">
   <audio autoplay=""><source src="Relax - Smooth Trap.mp3" type="audio/mpeg">
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+
+    <Script src="firebase.js"></Script>
   </audio>
   
 </head>
@@ -18,19 +22,31 @@
 <html>
   <body> 
  
-    <div class = "contatiner">
-  
-    <form class="box" action="index.html" method="post" >
+    
+      
+    
+    <div id="formContainer" class="box" action="index.html" method="post" >
+       
+      <div id="header"></div>
+
       <h1>Login</h1>
       
-      <input type="text" input id="txtUsername" name="" placeholder="Username">
-      <input type="text" input id="txtPassword" name="" placeholder="Password">
+        <input type="email" placeholder="email" id="email"/>
+        <input type="password" placeholder="password" id="password"/>
+        
+        <button onclick="signUp()" ="signUp">Sign Up</button>
+
+        <button onclick="signIn()" ="signIn">Sign In</button>
+
+        <button onclick="signOut()" ="signOut">Sign Out</button>
       
 
-      <input type="text" button id= "btnLogin" class="btn btn-action" name="" value="Login">
-      <input type="text" button id= "btnLogin" class="btn btn-action" name="" value="Signup">
-    </a>
-    </form>
+    </div>
+
+    </div>
+  
+
+
 
   <br><br> 
 

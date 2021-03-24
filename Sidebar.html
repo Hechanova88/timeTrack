@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="sidebar.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+        <Script src="firebase.js"></Script>
     </head>
     <body>
 
@@ -21,7 +22,10 @@
                     <ul>
                         <li><a href="#"><i class="fas fa-search"></i></a></li>
                         <li><a href="#"><i class="fas fa-bell"></i></a></li>
-                        <li><a href="index.html"><i class="fas fa-power-off"></i></a></li>
+                        <li><a href="index.html" onclick="signOut()" ="signOut"></a>><i class="fas fa-power-off"></i></a></li>
+                        
+
+
                     </ul>
                 </div>
             </div>
