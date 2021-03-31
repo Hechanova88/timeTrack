@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
   </head>
   <body>
-
+<main>
     <div id="particles-js"></div>
     <script type="text/javascript" src = "particles.js"></script>
-    <script type="text/javascript" src = "app.js"></script>   
+    <script type="text/javascript" src = "app.js"></script>  
+    <script src="./function.js"></script> 
 
     <!--alert messages start
     <div class="alert-success">
@@ -30,21 +31,44 @@
         <div><i class="fas fa-phone"></i>(954)431-4300</div>
         <div><i class="fas fa-clock"></i>Mon - Fri 8:00 AM to 5:00 PM</div>
       </div>
+      
       <div class="contact-form">
         <h2>Submit Your Request</h2>
       <form class="contact" action="" method="post">
-        <input type="text" name="name" class="text-box" placeholder="Your Name" required>
-        <input type="email" name="email" class="text-box" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        
-        <a href="index.html"><i class="send-btn">Send</i>
+        <input type="text" name="name" id="userId" class="text-box" placeholder="Your Name" required>
+        <input type="email" name="email" id="userEmail" class="text-box" placeholder="Your Email" required>
+        <textarea name="message" id="userMessage" rows="5" placeholder="Your Message" required></textarea>
+        <button id="addBtn" class="btn waves-effect waves-light">Add</button>
+        <button id="updateBtn" class="btn waves-effect waves-light">Update</button>
+        <button id="removeBtn" class="btn waves-effect red darken-1">Remove</button>
 
+        <a href="index.html"><button id="updateBtn" i class="send-btn">
 
       </form>
     </div>
   </div>
   <!--contact section end-->
+</main>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
 
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyD-DBBqcmv8pE2MwuCa1kESmatCxDZSOT4",
+    authDomain: "auth-development-a310b.firebaseapp.com",
+    databaseURL: "https://auth-development-a310b-default-rtdb.firebaseio.com",
+    projectId: "auth-development-a310b",
+    storageBucket: "auth-development-a310b.appspot.com",
+    messagingSenderId: "487757847348",
+    appId: "1:487757847348:web:3b8d304a110b9a8cab2361"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
 </body>
 </html>
     
