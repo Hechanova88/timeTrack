@@ -1,57 +1,50 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Contact Form</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="veiwport" content="width=device-width, intial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Firebase - Database Client side</title>
     <link rel="stylesheet" href="messageOut.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
-  </head>
-  <body>
-<main>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+   
+
+    <main>
+        <div class="contact-section">
+            <div class="contact-info">
+              <div><i class="fas fa-map-marker-alt"></i>Address: 1640 SW 145th Ave, Pembrooke Pines</div>
+              <div><i class="fas fa-envelope"></i>keiserU@gmail.com</div>
+              <div><i class="fas fa-phone"></i>(954)431-4300</div>
+              <div><i class="fas fa-clock"></i>Mon - Fri 8:00 AM to 5:00 PM</div>
+            </div>
+      
+        <form>
+            <label for="userId">User ID</label><br>
+            <input type="text" name="userId" id="userId"><br>
+            <label for="firstName">First Name</label><br>
+            <input type="text" name="firstName" id="firstName"><br>
+            <label for="lastName">Last Name</label><br>
+            <input type="text" name="lastName" id="lastName"><br>
+            <label for="age">Age</label><br>
+            <input type="number" name="age" id="age"><br>
+            <textarea name="message" rows="5" id="message" placeholder="Your Message" required></textarea><br>
+            <button id="addBtn" clas="btn waves-effect waves-light">Add</button>
+            <button id="updateBtn" class="btn waves-effect waves-light">Update</button>
+            <button id="removeBtn" class="btn waves-effect red-darken-1">Remove</button>
+        </form>
+        <a href="index.html"><i class="home-btn">Home</i>
+
+    </main>
     <div id="particles-js"></div>
     <script type="text/javascript" src = "particles.js"></script>
     <script type="text/javascript" src = "app.js"></script>  
-    <script src="./function.js"></script> 
-
-    <!--alert messages start
-    <div class="alert-success">
-      <span>Message Sent! Thank you for contacting us.</span>
-    </div>
-    <div class="alert-error">
-      <span>Something went wrong! Please try again.</span>
-    </div>
-    alert messages end-->
-
-    <!--contact section start-->
-    <div class="contact-section">
-      <div class="contact-info">
-        <div><i class="fas fa-map-marker-alt"></i>Address: 1640 SW 145th Ave, Pembrooke Pines</div>
-        <div><i class="fas fa-envelope"></i>keiserU@gmail.com</div>
-        <div><i class="fas fa-phone"></i>(954)431-4300</div>
-        <div><i class="fas fa-clock"></i>Mon - Fri 8:00 AM to 5:00 PM</div>
-      </div>
-      
-      <div class="contact-form">
-        <h2>Submit Your Request</h2>
-      <form class="contact" action="" method="post">
-        <input type="text" name="name" id="userId" class="text-box" placeholder="Your Name" required>
-        <input type="email" name="email" id="userEmail" class="text-box" placeholder="Your Email" required>
-        <textarea name="message" id="userMessage" rows="5" placeholder="Your Message" required></textarea>
-        <button id="addBtn" class="btn waves-effect waves-light">Add</button>
-        <button id="updateBtn" class="btn waves-effect waves-light">Update</button>
-        <button id="removeBtn" class="btn waves-effect red darken-1">Remove</button>
-
-        <a href="index.html"><button id="updateBtn" i class="send-btn">
-
-      </form>
-    </div>
-  </div>
-  <!--contact section end-->
-</main>
-<!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
@@ -69,6 +62,6 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 </script>
+    <script src="./function.js"></script>
 </body>
 </html>
-    
