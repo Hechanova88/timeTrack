@@ -68,6 +68,22 @@
   cursor: pointer;
 }
 
+.userId{
+  color: rgb(46, 167, 82);
+}
+
+.firstName{
+  color: rgb(46, 167, 82);
+}
+
+.lastName {
+  color: rgb(46, 167, 82);
+}
+
+.age {
+  color: rgb(46, 167, 82);
+}
+
 .message{
   color: rgb(46, 167, 82);
   margin: 0 8px;
